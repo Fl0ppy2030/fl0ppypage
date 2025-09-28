@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fl0ppy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+   
+</head>
+<body>
+    <!-- Elemento de áudio -->
+    <audio id="audioPlayer" preload="auto"></audio>
+    
+    <!-- Botão de mudo -->
+    <button class="mute-btn" id="muteBtn">
+        <i class="fas fa-volume-up"></i>
+    </button>
+    
+    <div class="container">
+        <!-- Perfil -->
+        <div class="profile-card">
+            <img src="img/Avatar.jpg" alt="Avatar" class="avatar">
+            <h1 class="title">fl0ppy</h1>
+            <p class="subtitle">As grandes ideias surgem da observação dos pequenos detalhes.</p>
+            
+            <div class="buttons">
+                <button class="btn">
+                    <a href="https://open.spotify.com/user/31qwq54scg3v5kh3kthd3d7savua?si=6023f503ec3b4422">
+                    <i class="fab fa-spotify"></i>
+                    </a>
+                </button>
+
+                <button class="btn">
+                    <a href="https://steamcommunity.com/profiles/76561199145140444/">
+                    <i class="fab fa-steam"></i>
+                    </a>
+                </button>
+
+               <button class="btn" onclick="copiarDiscord()">
+                    <i class="fab fa-discord"></i>
+                    <span class="tooltip">Copiado!</span>
+                </button>
+
+                <button class="btn">
+                    <a href="https://github.com/Fl0ppy2030">
+                    <i class="fab fa-github"></i>
+                    </a>
+                </button>
+
+                
+            </div>
+            
+            <div class="views">
+                <i class="fas fa-eye"></i>
+                <span id="viewCount">1,245 visualizações</span>
+            </div>
+        </div>
+        
+        <!-- Player de Música Compacto -->
+        <div class="player-card">
+            <img src="img/musica.jpg" alt="Capa do Álbum" class="album-cover" id="albumCover">
+            
+            <div class="song-info">
+                <h3 class="song-title" id="songTitle">Só/Sim ou Não</h3>
+                <p class="artist" id="songArtist">Massaru</p>
+                
+                <div class="progress-container">
+                    <div class="progress-info">
+                        <span id="currentTime">0:00</span>
+                        <span id="totalTime">0:00</span>
+                    </div>
+                    <div class="progress-bar" id="progressBar">
+                        <div class="progress" id="progress"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="player-controls">
+                <button class="play-btn" id="playBtn">
+                    <i class="fas fa-pause"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Snake Game Easter Egg -->
+    <div class="snake-game" id="snakeGame">
+        <button class="close-snake" id="closeSnake">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="snake-container">
+            <canvas id="snakeCanvas" width="400" height="400"></canvas>
+            <div class="snake-controls">
+                <p>Use WASD ou SETAS para mover</p>
+                <p>Pressione ESC para sair</p>
+            </div>
+        </div>
+    </div>
+
+
+   
+</body>
+</html>

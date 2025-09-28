@@ -1,0 +1,356 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://wallpapers.com/images/hd/goth-aesthetic-black-1920-x-1080-c3rd1w66xdq2goul.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .mute-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .mute-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: scale(1.1);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            margin-top: 40px;
+        }
+        
+        .profile-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+        }
+        
+        .title {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 25px;
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: rgba(82, 7, 112, 0.3);
+            transform: scale(1.1);
+        }
+        
+        .btn a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+
+
+
+
+        .views {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .player-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .album-cover {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        
+        .song-info {
+            flex: 1;
+        }
+        
+        .song-title {
+            font-size: 1rem;
+            margin-bottom: 4px;
+            font-weight: 600;
+        }
+        
+        .artist {
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+        
+        .player-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .play-btn {
+            background: #6c5ce7;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .play-btn:hover {
+            background: #5b4bd4;
+            transform: scale(1.1);
+        }
+        
+        .progress-container {
+            width: 100%;
+            margin-top: 8px;
+        }
+        
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.7rem;
+            opacity: 0.7;
+            margin-bottom: 5px;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .progress {
+            height: 100%;
+            width: 0%;
+            background: #6c5ce7;
+            border-radius: 2px;
+            transition: width 0.1s linear;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 600px) {
+            .container {
+                max-width: 90%;
+                margin-top: 20px;
+            }
+            
+            .profile-card {
+                padding: 20px;
+            }
+            
+            .player-card {
+                padding: 12px;
+            }
+            
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .title {
+                font-size: 1.7rem;
+            }
+            
+            .album-cover {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .song-title {
+                font-size: 0.9rem;
+            }
+            
+            .artist {
+                font-size: 0.75rem;
+            }
+            
+            .mute-btn {
+                width: 45px;
+                height: 45px;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .player-card {
+                gap: 10px;
+            }
+            
+            .album-cover {
+                width: 45px;
+                height: 45px;
+            }
+            
+            .play-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 0.9rem;
+            }
+        }
+
+
+
+
+
+
+        /* Snake Game Easter Egg */
+.snake-game {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.snake-game.active {
+    display: flex;
+}
+
+.snake-container {
+    background: #111;
+    border: 2px solid #6c5ce7;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#snakeCanvas {
+    border: 1px solid #333;
+    background: #000;
+}
+
+.snake-controls {
+    text-align: center;
+    margin-top: 15px;
+    color: white;
+}
+
+.close-snake {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #ff4757;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+
+
+
+    /* Tooltip styles */
+
+  .tooltip {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .btn.show-tooltip .tooltip {
+    opacity: 1;
+  }
+
+
+ 
