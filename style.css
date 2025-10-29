@@ -353,4 +353,11 @@
   }
 
 
- 
+
+  footer {
+            margin-top: auto;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
