@@ -298,3 +298,8 @@ function copiarDiscord() {
       }, 1000);
     });
   }
+
+
+// Atualizar ano no footer
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
